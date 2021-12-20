@@ -6,7 +6,7 @@
 // FILE:    project.js
 //
 // DESCRIPTION:
-//     Starter file to help get you started with encrypt-it
+//     Starter file to help get you started with encrypt-it 
 //
 /*
  * CSE 154
