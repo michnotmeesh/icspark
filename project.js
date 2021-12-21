@@ -9,10 +9,13 @@
 //     Starter file to help get you started with encrypt-it
 //     Functions (Declaring/calling functions, functions as values,
 //     optional arguments, return statements)
-/*
- * CSE 154
- *
- */
+//     Nonogram:
+//         1) make a single tile turn black when it is clicked
+//         2) toggling
+//         3) clear button
+//         4) EXTRA CREDIT: drag and fill
+// *******************************************************************
+
 (function() {
   "use strict";
 
