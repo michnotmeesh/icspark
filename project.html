@@ -6,63 +6,86 @@
 --  FILE:
 --
 --  DESCRIPTION:
---      Use this HTML for reference to what needs to be manipulated in your JS file 
+--      Use this HTML for reference to what needs to be manipulated in your JS file
+--      Nonogram:
+--      1) make a single tile turn black when it is clicked
+--      2) toggling
+--      3) clear button
+--      4) EXTRA CREDIT: drag and fill
 --
 -->
 
-<!DOCTYPE>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <title>Encrypt-It!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lab 4: Nonograms!</title>
+    <link href="nonograms.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>Encrypt-It!</h1>
-      <h2>Translate any text message into a super-secret cipher!</h2>
-    </header>
-    <main>
-      <fieldset>
-        <legend>Text to Encrypt</legend>
-        <textarea id="input-text" rows="10" cols="60"
-         placeholder="Enter your message to encrypted here"></textarea>
-      </fieldset>
-      <fieldset>
-        <legend>Encrypt Options</legend>
-
-        <p>
-          <strong>Cipher Type: </strong>
-          <select id="cipher-type">
-            <option value="shift">Shift Cipher</option>
-            <option value="random">Randomized</option>
-          </select>
-        </p>
-
-        <p>
-          <strong>Font Size: </strong>
-          <label>
-            <input checked type="radio" name="text-size" value="12pt">12pt</input>
-          </label>
-          <label>
-            <input type="radio" name="text-size" value="24pt">24pt</input>
-          </label>
-        </p>
-
-        <p>
-          <label>
-            <strong>All-Caps:</strong>
-            <input id="all-caps" type="checkbox" name="uppercase-ouput" value="uppercase"/>
-          </label>
-        </p>
-
-        <button id="encrypt-it">Encrypt It!</button>
-        <button id="reset">Reset</button>
-      </fieldset>
-
-      <div id="result-area">
-        <h2>Result:</h2>
-        <p id="result"></p>
+    <h1>Nonogram Puzzle!</h1>
+    <div id="puzzle" class="five">
+      <div id="empty-square"></div>
+      <div id="top-nums">
+        <div>
+          <div class="col-num-box vertical-divider">1</div>
+          <div class="col-num-box">2</div>
+          <div class="col-num-box">3</div>
+          <div class="col-num-box">2</div>
+          <div class="col-num-box thick-right-border">1</div>
+        </div>
+        <div>
+          <div class="col-num-box vertical-divider">1</div>
+          <div class="col-num-box">2</div>
+          <div class="col-num-box">1</div>
+          <div class="col-num-box">2</div>
+          <div class="col-num-box thick-right-border">1</div>
+        </div>
       </div>
-    </main>
+      <div id="left-nums">
+        <div class="left-row thick-top-border">
+          <div class="row-num-box">5</div>
+        </div>
+        <div class="left-row">
+          <div class="row-num-box">3</div>
+        </div>
+        <div class="left-row">
+          <div class="row-num-box">1</div>
+        </div>
+        <div class="left-row">
+          <div class="row-num-box">1</div>
+          <div class="row-num-box">1</div>
+        </div>
+        <div class="left-row horizontal-divider">
+          <div class="row-num-box">5</div>
+        </div>
+      </div>
+      <div id="grid">
+        <div class="box clear thick-top-border vertical-divider"></div>
+        <div class="box thick-top-border"></div>
+        <div class="box thick-top-border"></div>
+        <div class="box thick-top-border"></div>
+        <div class="box thick-top-border"></div>
+        <div class="box clear vertical-divider"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box clear vertical-divider"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box clear vertical-divider"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box clear horizontal-divider vertical-divider"></div>
+        <div class="box horizontal-divider"></div>
+        <div class="box horizontal-divider"></div>
+        <div class="box horizontal-divider"></div>
+        <div class="box horizontal-divider"></div>
+      </div>
+    </div>
   </body>
 </html>

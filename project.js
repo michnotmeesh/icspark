@@ -6,8 +6,9 @@
 // FILE:    project.js
 //
 // DESCRIPTION:
-//     Starter file to help get you started with encrypt-it 
-//
+//     Starter file to help get you started with encrypt-it
+//     Functions (Declaring/calling functions, functions as values,
+//     optional arguments, return statements)
 /*
  * CSE 154
  *
