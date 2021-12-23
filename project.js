@@ -1,56 +1,149 @@
-// *******************************************************************
-// NAME:    /* YOUR NAME HERE */
-//
-// DATE:    December 18, 2021
-//
-// FILE:    project.js
-//
-// DESCRIPTION:
-//     Starter file to help get you started with encrypt-it
-//     Functions (Declaring/calling functions, functions as values,
-//     optional arguments, return statements)
-//     Nonogram:
-//         1) make a single tile turn black when it is clicked
-//         2) toggling
-//         3) clear button
-//         4) EXTRA CREDIT: drag and fill
-// *******************************************************************
+/*
+ * NAME:    YOUR NAME HERE
+ *
+ * DATE:    December 18, 2021
+ *
+ * FILE:    project.js
+ *
+ * DESCRIPTION:
+ *     Starter file to help get you started with encrypt-it
+ *     Functions (Declaring/calling functions, functions as values,
+ *     optional arguments, return statements)
+ *     Nonogram:
+ *     1) make a single tile turn black when it is clicked
+ *     2) toggling
+ *     3) clear button
+ *     4) EXTRA CREDIT: drag and fill
+ */
 
 (function() {
   "use strict";
 
-    /**
-    * The starting point in our program, setting up a listener
-    * for the "load" event on the window, signalling the HTML DOM has been constructed
-    * on the page. When this event occurs, the attached function (init) will be called.
+  let currentTile = "";
+  let down = false;
+
+  /*
+   * Sets up the various event listeners on the page, including
+   * click and dragging behavior for each puzzle grid square and
+   * the functionality for clearing a puzzle state.
+   */
+  window.onload = function() {
+    setUpTiles();
+    id("clear").onclick = clearPuzzle;
+  };
+
+  /*
+   * Resets the current mouse-dragging state, turning off
+   * any drag-and-fill behavior until the next click-and-drag session.
+   */
+  window.onmouseup = function() {
+    currentTile = "";
+    down = false;
+  };
+
+  /*
+   * Comment TODO: TA loses comment points
+   */
+  function dragBoxStatus() {
+    if (down) {
+      if (currentTile == "") {
+        this.classList.remove("crossed-out");
+    } else if (currentTile == "filled") {
+        this.classList.add("filled");
+        this.classList.remove("crossed-out");
+      } else { // crossed-out
+        this.classList.add("crossed-out");
+        this.classList.remove("filled");
+      }
+    }
+  }
+
+  /*
+   * SOLUTION TO PART II: Make a single tile black when clicked
+   */
+    function changeBoxMark() {
+        this.classList.add("filled");
+    }
+
+    /*
+     * SOLUTION TO PART III:
+     */
+      function changeBoxMark() {
+          if (this.classList.contains("filled")) {
+              this.classList.remove("filled");
+          } else {
+              this.classList.add("filled");
+          }
+      }
+
+  /*
+   * Comment TODO: TA loses comment points
+   */
+  function clearPuzzle() {
+    if (confirm("Are you sure you want to clear the puzzle?")) {
+      let boxes = select(".box");
+      for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove("filled", "crossed-out");
+      }
+    }
+  }
+
+  /*
+   * Comment TODO: TA loses comment points
+   */
+  function setUpTiles() {
+    let tiles = select(".box");
+    for (let i = 0; i < tiles.length; i++) {
+      let div = tiles[i];
+      div.onmousedown = changeBoxMark;
+      div.onmouseover = dragBoxStatus;
+      div.onclick = function() {
+        down = false;
+        currentType = "";
+      };
+    }
+  }
+
+  /*
+   * SOLUTION TO PART II: Make a single tile turn black when clicked
+   * Remove alert pop up.
+   */
+    function setUpTiles() {
+        let tiles = select(".box");
+        for (let i = 0; i < tiles.length; i++) {
+            let div = tiles[i];
+            div.onclick = changeBoxMark();
+        }
+    }
+
+    /*
+    * SOLUTION TO PART I: Make an alert pop up when a user clicks a tile
     */
-    window.addEventListener("load", init);
-
-    /**
-    * TODO: Write a function comment using JSDoc.
-    */
-    function init() {
-    // Note: In this function, we usually want to set up our event handlers
-    // for UI elements on the page.
+    function setUpTiles() {
+        let tiles = select(".box");
+        for (let i = 0; i < tiles.length; i++) {
+            let div = tiles[i];
+            div.onclick = function() {
+                alert("You clicked a tile!");
+            };
+        }
     }
 
-    // Add any other functions in this area (you should not implement your
-    // entire program in the init function, for similar reasons that
-    // you shouldn't write an entire Java program in the main method).
+  /**
+   * Returns the element that has the ID attribute with the specified value.
+   * @param {string} id - element ID
+   * @return {object} DOM object associated with id.
+   */
+  function id (id) {
+    return document.getElementById(id);
+  }
 
-    function id(idName)
-    {
-        return document.getElementById(idName);
-    }
-
-    function qs(selector)
-    { // less common, but you may find it helpful
-        return document.querySelector(selector);
-    }
-
-    function qsa(selector)
-    {
-        return document.querySelectorAll(selector);
-    }
-
+  /**
+   * Returns the array of elements that match the given CSS selector.
+   * @param {string} query - CSS query selector
+   * @return {object[]} array of DOM objects matching the query.
+   */
+  function select (query) {
+    return document.querySelectorAll(query);
+  }
 })();
