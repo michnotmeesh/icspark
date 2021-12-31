@@ -45,3 +45,11 @@ Nonogram:
 To do this, you will need to implement ```if-else``` statements in the ```changeBoxMark()``` function.
 
 There is no "unfilled" class for the tiles. You can simply clear a filled tile by removing the ```.filled``` class.
+
+### Part IV: Add a "Clear" button
+
+When the "Clear" button in ```project.html``` is clicked, all filled tiles will be unfilled.
+
+1. Complete the function ```clearPuzzle()``` by
+
+2. Add a ```confirm``` in this event handler so that the user has a second chance to decide if they want to clear their tiles.

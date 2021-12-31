@@ -19,9 +19,6 @@
 (function() {
   "use strict";
 
-  let currentTile = "";
-  let down = false;
-
   /*
    * Sets up the various event listeners on the page, including
    * click and dragging behavior for each puzzle grid square and
@@ -30,15 +27,6 @@
   window.onload = function() {
     setUpTiles();
     id("clear").onclick = clearPuzzle;
-  };
-
-  /*
-   * Resets the current mouse-dragging state, turning off
-   * any drag-and-fill behavior until the next click-and-drag session.
-   */
-  window.onmouseup = function() {
-    currentTile = "";
-    down = false;
   };
 
   /*
@@ -83,24 +71,8 @@
     if (confirm("Are you sure you want to clear the puzzle?")) {
       let boxes = select(".box");
       for (let i = 0; i < boxes.length; i++) {
-        boxes[i].classList.remove("filled", "crossed-out");
+        boxes[i].classList.remove("filled");
       }
-    }
-  }
-
-  /*
-   * Comment TODO: TA loses comment points
-   */
-  function setUpTiles() {
-    let tiles = select(".box");
-    for (let i = 0; i < tiles.length; i++) {
-      let div = tiles[i];
-      div.onmousedown = changeBoxMark;
-      div.onmouseover = dragBoxStatus;
-      div.onclick = function() {
-        down = false;
-        currentType = "";
-      };
     }
   }
 
