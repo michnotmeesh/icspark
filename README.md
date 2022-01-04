@@ -15,41 +15,46 @@ To complete this project, students should have the following:
 
 ## Your Challenge
 
-Nonogram:
-*     1) make an alert when a user clicks a tile
-*     2) make a single tile turn black when it is clicked
-*     3) toggling
-*     4) clear button
-*     5) EXTRA CREDIT: drag and fill
-
-### Part I: Make an alert when a user clicks a tile
+### Getting started
 
 1. Clone this repository into your documents folder.
+
 2. Open the JavaScript file (```project.js```). You will be writing JavaScript code here.
-3. Complete the function called ```setUpTiles()``` so that an alert pops up with the message, ***"You clicked a tile!"*** every time a user clicks on any tile. In other words, every tile in the grid should have the ```setUpTiles()``` function attached to it.
+
+### Part I: Make an alert pop up when a user clicks a tile
+
+If a user clicks on any tile, an alert pops up with a message. Complete the function ```setUpTiles()``` by:
+
+1. Selecting every tile in the grid and implementing an ```onclick``` event handler to each tile.
 
 (Hint: Every tile in the grid has the class ```.box```)
 
+2. If any tile is clicked on, an alert pops up with the message ***"You clicked a tile!"***. Use the ```alert()``` function.
+
 ### Part II: Make a single tile turn black when its clicked
+
+
 
 1. Complete the function called ```changeBoxMark()``` so that a single tile is filled in when a user clicks on it. There exists a class ```.filled``` that handles the styling for you in the ```css``` file.
 
 (Hint: You can add this class to the tile that is clicked to fill it in)
 
-2. Modify the function called ```setUpTiles()``` so that the ```changeBoxMark()``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles()``` function.
+2. Modify the function ```setUpTiles()``` so that the ```changeBoxMark()``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles()``` function.
 
 ### Part III: Implement fill toggling
 
-1. Modify your ```onclick``` event handler for each tile so that when a user clicks a black tile, it will turn white (or become unfilled). If a user clicks a white tile, it will turn black (or become filled).
+If a user clicks a black tile, it will turn white (or become unfilled). If a user clicks on a white tile, it will turn black (or become filled). Modify your ```onclick``` event handler for each tile so that toggling between unfilled and filled tiles is possible.
 
-To do this, you will need to implement ```if-else``` statements in the ```changeBoxMark()``` function.
-
-There is no "unfilled" class for the tiles. You can simply clear a filled tile by removing the ```.filled``` class.
+1. You will need to implement ```if-else``` statements in the ```changeBoxMark()``` function. There is no "unfilled" class for the tiles. You can clear a filled tile by removing the ```.filled``` class.
 
 ### Part IV: Add a "Clear" button
 
-When the "Clear" button in ```project.html``` is clicked, all filled tiles will be unfilled.
+When the "Clear" button is clicked, all filled tiles will be unfilled.
 
-1. Complete the function ```clearPuzzle()``` by
+1. Complete the function ```clearPuzzle()``` by selecting every tile and removing the class ```.filled```
 
-2. Add a ```confirm``` in this event handler so that the user has a second chance to decide if they want to clear their tiles.
+(Hint: Every tile in the grid has the class ```.box```)
+
+2. Add a ```confirm``` in the function ```clearPuzzle()``` so that the user has a second chance to decide if they want to clear their tiles.
+
+Original project made by Paul Cleverdon and his team of developers (2018).

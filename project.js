@@ -54,14 +54,10 @@
     }
 
     /*
-     * SOLUTION TO PART III:
+     * TO DO: Complete the code by replacing the comments
      */
       function changeBoxMark() {
-          if (this.classList.contains("filled")) {
-              this.classList.remove("filled");
-          } else {
-              this.classList.add("filled");
-          }
+
       }
 
   /*
