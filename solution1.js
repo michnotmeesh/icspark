@@ -17,13 +17,13 @@
     * DO NOT DELETE THIS CODE
     *
     * Sets up the various event listeners on the page, including
-    * click behavior for each puzzle grid square and the
-    * functionality for clearing a puzzle state.
+    * click behavior for each puzzle grid square.
     */
     window.onload = function() {
         setUpTiles();
-        id("clear").onclick = clearPuzzle;
     };
+
+    /* BEGIN WRITING YOUR CODE BELOW */
 
    /*
     * PART I: Make an alert pop up when a user clicks a tile
@@ -38,12 +38,12 @@
         }
     }
 
-/* HELPER FUNCTION FOR  */
+   /* HELPER FUNCTIONS (OPTIONAL) */
 
    /**
     * Returns the element that has the ID attribute with the specified value.
     * @param {string} id - element ID
-    * @return {object} DOM object associated with id.
+    * @return {object} DOM object of given id.
     */
     function id (id) {
         return document.getElementById(id);

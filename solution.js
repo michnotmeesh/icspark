@@ -3,41 +3,46 @@
  *
  * DATE:    December 18, 2021
  *
- * FILE:    project.js
+ * FILE:    solution.js
  *
  * DESCRIPTION:
- *     Starter file to help get you started with encrypt-it
- *     Functions (Declaring/calling functions, functions as values,
- *     optional arguments, return statements)
- *     Nonogram:
- *     1) make a single tile turn black when it is clicked
- *     2) toggling
- *     3) clear button
- *     4) EXTRA CREDIT: drag and fill
+ *     Solution to Part IV of Nonogram Puzzle and
+ *     the working solution for the entire project
+ *
  */
 
 (function() {
     "use strict";
 
    /*
+    * DO NOT DELETE THIS CODE
+    *
     * Sets up the various event listeners on the page, including
-    * click and dragging behavior for each puzzle grid square and
-    * the functionality for clearing a puzzle state.
+    * click behavior for each puzzle grid square and the
+    * functionality for clearing a puzzle.
     */
     window.onload = function() {
         setUpTiles();
         id("clear").onclick = clearPuzzle;
     };
 
+   /* BEGIN WRITING YOUR CODE BELOW */
+
    /*
-    * SOLUTION TO PART II: Make a single tile black when clicked
+    * SOLUTION TO PART IV: Add functionality to the "Clear"
+    * button and a confirm message.
     */
-    function changeBoxMark() {
-        this.classList.add("filled");
+    function clearPuzzle() {
+        if (confirm("Are you sure you want to clear the puzzle?")) {
+            let tiles = select(".box");
+            for (let i = 0; i < tiles.length; i++) {
+                tiles[i].classList.remove("filled");
+            }
+        }
     }
 
    /*
-    * SOLUTION TO PART III:
+    * SOLUTION FROM PART III: Implement fill toggling
     */
     function changeBoxMark() {
         if (this.classList.contains("filled")) {
@@ -46,48 +51,25 @@
             this.classList.add("filled");
         }
     }
-
-  /*
-   * Comment TODO: TA loses comment points
-   */
-  function clearPuzzle() {
-    if (confirm("Are you sure you want to clear the puzzle?")) {
-      let boxes = select(".box");
-      for (let i = 0; i < boxes.length; i++) {
-        boxes[i].classList.remove("filled", "crossed-out");
-      }
-    }
-  }
-
+    
    /*
-    * SOLUTION TO PART II: Make a single tile turn black when clicked
-    * Remove alert pop up.
+    * SOLUTION TO PART II: Call the changeBoxMark function when a
+    * tile is clicked.
     */
     function setUpTiles() {
         let tiles = select(".box");
         for (let i = 0; i < tiles.length; i++) {
             let div = tiles[i];
-            div.onclick = changeBoxMark();
+            div.onclick = changeBoxMark;
         }
     }
 
-   /*
-    * SOLUTION TO PART I: Make an alert pop up when a user clicks a tile
-    */
-    function setUpTiles() {
-        let tiles = select(".box");
-        for (let i = 0; i < tiles.length; i++) {
-            let div = tiles[i];
-            div.onclick = function() {
-                alert("You clicked a tile!");
-            };
-        }
-    }
+   /* HELPER FUNCTIONS (OPTIONAL) */
 
    /**
     * Returns the element that has the ID attribute with the specified value.
     * @param {string} id - element ID
-    * @return {object} DOM object associated with id.
+    * @return {object} DOM object of given id.
     */
     function id (id) {
         return document.getElementById(id);

@@ -1,13 +1,13 @@
 /*
- * This is the stylesheet for nonogram puzzle, adapted from my previous project
+ * This is the stylesheet for Nonogram Puzzle, adapted from a project I completed when I was a student (just like you!)
  *
- * Feel free to dig around after you are done with the JavaScript practice!
- * Most of the things here should look familiar!
+ * Feel free to dig around after you are done with the JavaScript practice.
+ * Most of the things here should look familiar and can be changed to create nonogram puzzles of different sizes.
  *
  * - Michelle
  */
 
- body {
+body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10pt;
   text-align: center;
@@ -103,7 +103,7 @@ h1 {
 }
 
 .five #left-nums, .five .left-row, .five #empty-square {
-  width: 140px;
+  width: 210px;
 }
 
 .five .box, .five .col-num-box, .five .row-num-box {
@@ -113,7 +113,7 @@ h1 {
 }
 
 .five #empty-square {
-  height: 140px;
+  height: 210px;
 }
 
 .five {

@@ -3,49 +3,44 @@
  *
  * DATE:    December 18, 2021
  *
- * FILE:    project.js
+ * FILE:    solution2.js
  *
  * DESCRIPTION:
- *     Starter file to help get you started with Nonogram Puzzle.
- *
+ *     Solution to Part II of Nonogram Puzzle
  */
 
 (function() {
-  "use strict";
+    "use strict";
 
    /*
     * DO NOT DELETE THIS CODE
     *
     * Sets up the various event listeners on the page, including
-    * click behavior for each puzzle grid square and the
-    * functionality for clearing a puzzle.
+    * click behavior for each puzzle grid square.
     */
     window.onload = function() {
         setUpTiles();
-        id("clear").onclick = clearPuzzle;
     };
 
-   /* BEGIN WRITING YOUR CODE BELOW */
+    /* BEGIN WRITING YOUR CODE BELOW */
 
    /*
-    * Write comments for this function!
-    */
-    function clearPuzzle() {
-
-    }
-
-   /*
-    * Write comments for this function!
+    * SOLUTION TO PART II: Make a single tile black when clicked
     */
     function changeBoxMark() {
-
+        this.classList.add("filled");
     }
 
    /*
-    * Write comments for this function!
+    * SOLUTION TO PART II: Call the changeBoxMark function when a
+    * tile is clicked and remove the alert pop up.
     */
     function setUpTiles() {
-
+        let tiles = select(".box");
+        for (let i = 0; i < tiles.length; i++) {
+            let div = tiles[i];
+            div.onclick = changeBoxMark;
+        }
     }
 
    /* HELPER FUNCTIONS (OPTIONAL) */
