@@ -3,7 +3,7 @@
  *
  * DATE:    December 18, 2021
  *
- * FILE:    solution.js
+ * FILE:    solution3.js
  *
  * DESCRIPTION:
  *     Solution to Part III of Nonogram Puzzle
