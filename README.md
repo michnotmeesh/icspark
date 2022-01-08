@@ -17,7 +17,7 @@ To complete this project, students should have the following:
 
 ### Getting started
 
-1. Clone this repository into your documents folder.
+1. Download this project from GitHub.
 
 2. Open the JavaScript file (```project.js```). You will be writing JavaScript code here.
 
@@ -39,7 +39,7 @@ If a user clicks on any tile, it will turn black and become filled. You can comp
 
 1. Complete the function ```changeBoxMark``` so that a single tile is filled in when a user clicks on it. There is a class, ```.filled```, that handles the styling for you in the ```css``` file.
 
-(Hint: Utilize the function's ```this``` keyword so that only the clicked tile turns black.)
+(Hint: Utilize the function's ```this``` keyword.)
 
 2. Update the function ```setUpTiles``` so that the ```changeBoxMark``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles``` function.
 
