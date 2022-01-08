@@ -6,12 +6,12 @@ You'll be making a nonogram puzzle (Hanjie, Number Grid, Pi-Cross, etc) and allo
 
 Complete the UI of a nonogram puzzle. Practice DOM manipulation using JavaScript by completing several functions.
 
-We have provided the HTML (```project.html```) and CSS (```project.css```) that you will need for this project. You will be writing JavaScript code in a file called ```project.js```
+We have provided the HTML (```project.html```) and CSS (```project.css```) that you will need for this project. You will be writing JavaScript code in a file called ```project.js``` and make it possible to play the puzzle.
 
 ## Prerequisites
 
 To complete this project, students should have the following:
-* Basic understanding of JS (arrays, objects, for loops, functions, if statements)
+* Basic understanding of JS (arrays, objects, for loops, functions, if statements, this)
 
 ## Your Challenge
 
@@ -20,6 +20,8 @@ To complete this project, students should have the following:
 1. Clone this repository into your documents folder.
 
 2. Open the JavaScript file (```project.js```). You will be writing JavaScript code here.
+
+3. Open ```project.html``` on your web browser to understand what you will be adding functionality to.
 
 ### Part I: Make an alert pop up when a user clicks a tile
 
@@ -45,7 +47,7 @@ If a user clicks on any tile, it will turn black and become filled. You can comp
 
 If a user clicks on a white tile, it will turn black (or become filled). If a user clicks a black tile, it will turn white (or become unfilled). Modify your ```changeBoxMark``` function so that toggling between unfilled and filled tiles is possible.
 
-1. You will need to implement ```if-else``` statements in the ```changeBoxMark``` function to change black to white and vice versa. There is no "unfilled" class for the tiles. You can clear a filled tile by simply removing the ```.filled``` class.
+1. You will need to implement ```if-else``` statements in the ```changeBoxMark``` function to change black tiles to white tiles and vice versa. There is no "unfilled" class for the tiles. You can clear a filled tile by simply removing the ```.filled``` class.
 
 ### Part IV: Add functionality to the "Clear" button
 
