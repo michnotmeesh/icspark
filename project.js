@@ -11,7 +11,7 @@
  */
 
 (function() {
-  "use strict";
+   "use strict";
 
    /*
     * DO NOT DELETE THIS CODE
