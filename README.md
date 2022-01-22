@@ -61,6 +61,10 @@ If a user clicks on a white tile, it will turn black (or become filled). If a us
 
 1. You will need to implement ```if-else``` statements in the ```changeBoxMark``` function to change black tiles to white tiles and vice versa. There is no "unfilled" class for the tiles. You can clear a filled tile by simply removing the ```.filled``` class.
 
+<p>
+  <img src="screenshots/toggling.gif" width="60%" alt="Toggling tiles gif">
+</p>
+
 ### Part IV: Add functionality to the "Clear" button
 
 When the "Clear" button is clicked, the user will be asked to confirm their choice and if the choice is "OK" all filled tiles will be unfilled.
