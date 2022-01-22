@@ -37,6 +37,10 @@ If a user clicks on any tile, an alert pops up with a message. Complete the func
 
 2. If any tile is clicked on, an alert pops up with the message ***"You clicked a tile!"***. Use the ```alert``` function.
 
+<p>
+  <img src="screenshots/alert-chrome.png" width="60%" alt="Alert Screenshot">
+</p>
+
 ### Part II: Make a single tile turn black when its clicked
 
 If a user clicks on any tile, it will turn black and become filled. You can complete this by updating and completing two functions:
@@ -46,6 +50,10 @@ If a user clicks on any tile, it will turn black and become filled. You can comp
 (Hint: Utilize the function's ```this``` keyword.)
 
 2. Update the function ```setUpTiles``` so that the ```changeBoxMark``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles``` function.
+
+<p>
+  <img src="screenshots/single-tile.png" width="60%" alt="Single Black Tile Screenshot">
+</p>
 
 ### Part III: Implement fill toggling
 
