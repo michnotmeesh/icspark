@@ -3,7 +3,7 @@
 You'll be making a nonogram puzzle (Hanjie, Number Grid, Pi-Cross, etc) and allow the user to play the game by filling, unfilling, or clearing tiles of a nonogram puzzle. You do not need to know how these puzzles work to complete the project.
 
 <p>
-  <img src="screenshots/spec-intro-view.png" width="60%" alt="Nonogram Screenshot">
+  <img src="screenshots/spec-intro-view.png" width="80%" alt="Nonogram Screenshot">
 </p>
 
 ## Objective
