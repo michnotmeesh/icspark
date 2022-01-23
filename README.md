@@ -52,7 +52,7 @@ If a user clicks on any tile, it will turn black and become filled. You can comp
 2. Update the function ```setUpTiles``` so that the ```changeBoxMark``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles``` function.
 
 <p>
-  <img src="screenshots/single-tile-black.png" width="60%" alt="Single Black Tile gif">
+  <img src="screenshots/single-tile-black.gif" width="60%" alt="Single Black Tile gif">
 </p>
 
 ### Part III: Implement fill toggling
