@@ -38,7 +38,7 @@ If a user clicks on any tile, an alert pops up with a message. Complete the func
 2. If any tile is clicked on, an alert pops up with the message ***"You clicked a tile!"***. Use the ```alert``` function.
 
 <p>
-  <img src="screenshots/alert-chrome.png" width="60%" alt="Alert Screenshot">
+  <img src="screenshots/alert.gif" width="60%" alt="Alert gif">
 </p>
 
 ### Part II: Make a single tile turn black when its clicked
@@ -52,7 +52,7 @@ If a user clicks on any tile, it will turn black and become filled. You can comp
 2. Update the function ```setUpTiles``` so that the ```changeBoxMark``` function is called whenever a single tile is clicked on. You should also remove the alert pop up in ```setUpTiles``` function.
 
 <p>
-  <img src="screenshots/single-tile.png" width="60%" alt="Single Black Tile Screenshot">
+  <img src="screenshots/single-tile-black.png" width="60%" alt="Single Black Tile gif">
 </p>
 
 ### Part III: Implement fill toggling
@@ -74,5 +74,9 @@ When the "Clear" button is clicked, the user will be asked to confirm their choi
 (Hint: Every tile in the grid has the class ```.box```)
 
 2. Add a ```confirm``` message in the function ```clearPuzzle``` so that the user has a second chance to decide if they want to clear their tiles. The message should say ***"Are you sure you want to clear the puzzle?"***. The tiles will clear only if the users confirms ```OK```.
+
+<p>
+  <img src="screenshots/clear-button.gif" width="60%" alt="Clear button gif">
+</p>
 
 Original project made by Paul Cleverdon and his team of developers (2018).
