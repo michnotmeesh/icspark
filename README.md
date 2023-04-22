@@ -25,7 +25,7 @@ To complete this project, students should have the following:
 
 2. Open the JavaScript file (```project.js```). You will be writing JavaScript code here.
 
-3. Open ```project.html``` on your web browser to understand what you will be adding functionality to.
+3. Open ```project.html``` on your web browser to understand what you will be adding functionality to. Add the proper links to ```project.css``` and ```project,js```.
 
 ### Part I: Make an alert pop up when a user clicks a tile
 
