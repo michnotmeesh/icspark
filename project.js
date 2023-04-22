@@ -22,7 +22,6 @@
     */
     window.onload = function() {
         setUpTiles();
-        id("clear").onclick = clearPuzzle;
     };
 
    /* BEGIN WRITING YOUR CODE BELOW */
