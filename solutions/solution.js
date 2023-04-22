@@ -23,7 +23,7 @@
     */
     window.onload = function() {
         setUpTiles();
-        id("clear").onclick = clearPuzzle;
+        document.getElementById("clear").addEventListener("click", clearPuzzle);
     };
 
    /* BEGIN WRITING YOUR CODE BELOW */
@@ -34,7 +34,7 @@
     */
     function clearPuzzle() {
         if (confirm("Are you sure you want to clear the puzzle?")) {
-            let tiles = select(".box");
+            let tiles = document.querySelectorAll(".box");
             for (let i = 0; i < tiles.length; i++) {
                 tiles[i].classList.remove("filled");
             }
@@ -57,10 +57,10 @@
     * tile is clicked.
     */
     function setUpTiles() {
-        let tiles = select(".box");
+        let tiles = document.querySelectorAll(".box");
         for (let i = 0; i < tiles.length; i++) {
-            let div = tiles[i];
-            div.onclick = changeBoxMark;
+            let tile = tiles[i];
+            tile.addEventListener("click", changeBoxMark);
         }
     }
 
