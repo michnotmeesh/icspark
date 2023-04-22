@@ -36,10 +36,10 @@
     * tile is clicked and remove the alert pop up.
     */
     function setUpTiles() {
-        let tiles = select(".box");
+        let tiles = document.querySelectorAll(".box");
         for (let i = 0; i < tiles.length; i++) {
-            let div = tiles[i];
-            div.onclick = changeBoxMark;
+            let tile = tiles[i];
+            tile.addEventListener("click", changeBoxMark);
         }
     }
 
