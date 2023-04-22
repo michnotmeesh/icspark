@@ -29,12 +29,12 @@
     * PART I: Make an alert pop up when a user clicks a tile
     */
     function setUpTiles() {
-        let tiles = select(".box");
+        let tiles = document.querySelectorAll(".box");
         for (let i = 0; i < tiles.length; i++) {
-            let div = tiles[i];
-            div.onclick = function() {
+            let tile = tiles[i];
+            tile.addEventListener("click", function() {
                 alert("You clicked a tile!");
-            };
+            });
         }
     }
 
