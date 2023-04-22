@@ -78,5 +78,3 @@ When the "Clear" button is clicked, the user will be asked to confirm their choi
 <p>
   <img src="screenshots/clear-button.gif" width="80%" alt="Clear button gif">
 </p>
-
-Original project made by Paul Cleverdon and his team of developers (2018).
